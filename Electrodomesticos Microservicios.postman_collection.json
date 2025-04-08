@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "8ad830f3-1e3c-4bdc-b376-7ada1497d48f",
+		"name": "Electrodomesticos Microservicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41313121"
+	},
+	"item": [
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "Crear producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\":\"7A2B3C\",\r\n    \"nombre\":\"Aspiradora\",\r\n    \"marca\":\"Black & Decker\",\r\n    \"precio\":3599\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:443/producto-service/productos/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"producto-service",
+								"productos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:443/producto-service/productos/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"producto-service",
+								"productos",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar producto por codigo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:443/producto-service/productos/mostrar/7a2b3c",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"producto-service",
+								"productos",
+								"mostrar",
+								"7a2b3c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar producto por codigo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"precio\":2990\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:443/producto-service/productos/editar/7a2b3c",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"producto-service",
+								"productos",
+								"editar",
+								"7a2b3c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar producto por codigo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:443/producto-service/productos/eliminar/3a2b3c",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"producto-service",
+								"productos",
+								"eliminar",
+								"3a2b3c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carrito",
+			"item": [
+				{
+					"name": "Crear carrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productos\":[\r\n        \"1A2B3C\",\r\n        \"7A2B3C\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:443/carrito-service/carritos/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"carrito-service",
+								"carritos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar carritos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:443/carrito-service/carritos/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"carrito-service",
+								"carritos",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar carrito por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:443/carrito-service/carritos/mostrar/1",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"carrito-service",
+								"carritos",
+								"mostrar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar carrito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productos\":[\r\n        \"1A2B3C\",\r\n        \"4A2B3C\",\r\n        \"7A2B3C\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:443/carrito-service/carritos/editar/6",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"carrito-service",
+								"carritos",
+								"editar",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar carrito",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:443/carrito-service/carritos/eliminar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"carrito-service",
+								"carritos",
+								"eliminar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comprar carrito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:443/carrito-service/carritos/comprar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"carrito-service",
+								"carritos",
+								"comprar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ventas",
+			"item": [
+				{
+					"name": "Crear venta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCarrito\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:443/venta-service/ventas/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"venta-service",
+								"ventas",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar ventas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:443/venta-service/ventas/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"venta-service",
+								"ventas",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar ventas por id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:443/venta-service/ventas/mostrar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "443",
+							"path": [
+								"venta-service",
+								"ventas",
+								"mostrar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
